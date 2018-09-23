@@ -13,6 +13,7 @@ var airtrafficcontroller = require('./routes/airtrafficcontroller').default;
 var deeplearning = require('./routes/deeplearning').default;
 var customersAndHotel = require('./routes/customerandhotel').default;
 var tallyExpense = require('./routes/tally-expense').default;
+var broadcaster = require('./routes/broadcaster').default;
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -39,6 +40,7 @@ app.use('/airtrafficcontroller',airtrafficcontroller)
 app.use('/machine-learning',deeplearning)
 app.use('/customers-and-hotel',customersAndHotel)
 app.use('/tally-expense',tallyExpense)
+app.use('/broadcaster', broadcaster)
 
 // catch 404 and forward to error handler`
 app.use(function (req, res, next) {
